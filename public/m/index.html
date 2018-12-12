@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>移动端首页-self</title>
+    <!-- 1、css在head中引入
+    2、js在body结束标签上面引入
+    3、先引入第三方包（方便我们自己使用和覆盖）
+    4、再引入自己的包
+    5、如果有依赖关系，先引入被依赖的包，再引入不被依赖的包 -->
+
+    <!-- 引入MUI的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入主页的less文件 -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 引入less编译器 -->
+    <script src='lib/less/less.js'></script>
+</head>
+<body>
+    谢守岳自己写的乐淘移动端首页
+
+
+    <!-- 引入zepto -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入MUI的js文件 -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入模版引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+
+    <!-- 引入首页index.js -->
+    <script src="js/index.js"></script>
+</body>
+</html>

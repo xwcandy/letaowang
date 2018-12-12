@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			position: relative;
+			width: 200px;
+			height: 200px;
+		}
+		.inner{
+			position: absolute;
+			background-color: #ccc;
+			/* 如果定位子元素不设置宽高 使用 left + right 实现宽度 100%  top + bottom 实现高度100% */
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="inner"></div>
+	</div>
+</body>
+</html>
