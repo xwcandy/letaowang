@@ -1,0 +1,87 @@
+// 因为MUI帮你写了样式初始化，不需要写了，只要使用框架，都不需要写样式初始化
+
+// 定义变量
+
+@main-color: #006699;
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+body {
+    padding: .45rem 0;
+    height: 100vh;
+}
+#main {
+    position: relative;
+    height: 100%;
+}
+
+// 头部公共样式
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: @main-color;
+    height: .45rem;
+    width: 100vw;
+    display: flex;
+    // padding-left: .45rem;
+    text-align: center;
+    line-height: .45rem;
+    color: #fff;
+    z-index: 999;
+    h4 {
+        flex: 1;
+        line-height: .45rem;
+        height: .45rem;
+        margin: 0 .45rem 0 .45rem;
+        font-weight: 400;
+    }
+    a {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: .45rem;
+        height: .45rem;
+        line-height: .45rem;
+        color: #fff;
+    }
+}
+
+// 底部样式
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: .45rem;
+    background-color: @main-color;
+    z-index: 999;
+    ul {
+        display: flex;
+        li {
+            width: 25%;
+            padding: .02rem;
+            a {
+                display: block;
+                text-align: center;
+                color: #fff;
+                p {
+                    margin: 0;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
