@@ -11,7 +11,6 @@ img {
 body {
   padding: .45rem 0;
   height: 100vh;
-  font-size: .14rem;
 }
 #main {
   position: relative;
@@ -44,7 +43,7 @@ body {
 #header form .search {
   font-size: .14rem;
   text-align-last: left;
-  color: #666;
+  color: #ccc;
   background-color: #fff;
 }
 #header a {
@@ -59,8 +58,7 @@ body {
   left: 0;
 }
 #header a.icon-search,
-#header a.icon-home,
-#header a.icon-refresh {
+#header a.icon-home {
   right: 0;
 }
 #footer {
@@ -133,10 +131,6 @@ body {
 .product-list ul li a .title {
   height: .48rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 .product-list ul li a .title,
 .product-list ul li a .price {
@@ -148,4 +142,36 @@ body {
 }
 .product-list ul li a button {
   margin-bottom: .1rem;
+}
+#main {
+  font-size: .14rem;
+}
+#main .productDetail ul li:nth-child(3) {
+  line-height: .33rem;
+}
+#main .productDetail ul li:nth-child(3) .btn-size {
+  margin-bottom: .05rem;
+}
+#main .productDetail ul li:nth-child(3) .btn-size.active {
+  background-color: #ccc;
+}
+#footer {
+  background-color: #ccc;
+}
+#footer ul li {
+  flex: 1;
+  padding: .06rem;
+}
+#footer ul li button {
+  width: 100%;
+}
+#footer ul li:first-child {
+  width: .62rem;
+  flex: none;
+}
+#footer ul li:first-child a {
+  display: block;
+  padding: .06rem;
+  font-size: .2rem;
+  color: #333;
 }

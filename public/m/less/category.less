@@ -1,0 +1,65 @@
+// 分类页的样式
+
+//导入初始化样式
+@import 'base.less';
+
+// 主体区域样式
+#main {
+    display: flex;
+    background-color: #ccc;
+    // 分类左侧区域样式
+    .category-left {
+        width: .8rem;
+        position: relative;
+        ul {
+            // 因为内容和父盒子一样高，所以给ul一个高度，min-height代表最小高度
+            min-height: 5.78rem;
+            li {
+                a {
+                    display: block;
+                    height: .45rem;
+                    line-height: .45rem;
+                    text-align: center;
+                    font-size: .14rem;
+                    color: #666;
+                    background-color: #fff;
+                }
+                &.active {
+                    a {
+                        color: @main-color;
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+    // 分类右侧区域样式
+    .category-right {
+        flex: 1;
+        position: relative;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            // 副轴默认值是stretch，和拉伸至整个盒子，要改成flex-start
+            align-content: flex-start;
+            padding: .1rem;
+            // 最小高
+            min-height: 5.78rem;
+            li {
+                width: 33.33%;
+                a {
+                    display: block;
+                    
+                    background-color: #fff;
+                    img {
+                        width: 100%;
+                    }
+                    p {
+                        font-size: .14rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

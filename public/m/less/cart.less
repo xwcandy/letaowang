@@ -1,0 +1,80 @@
+// 引入公共样式
+@import 'base.less';
+
+
+body {
+    padding-bottom: .95rem;
+}
+
+//购物车主体区域样式
+#main {
+    ul {
+        li {
+            a {
+                // 因为MUI设置了white-space: nowrap 不允许换行
+                white-space: normal;
+                // 左侧
+                .mui-pull-left {
+                    width: .82rem;
+                    img {
+                        max-width: .8rem;
+                        height: .8rem;
+                    }
+                    .mui-checkbox {
+                        height: .3rem;
+                        input {
+                            right: 50%;
+                            transform: translateX(50%);
+                            width: .2rem;
+                            height: .2rem;
+                            &::before {
+                                font-size: .2rem;
+                                color: hotpink;
+                            }
+                        }
+                    }
+                }
+                // 右侧
+                .mui-media-body {
+                    line-height: .36rem;
+                    .product-title {
+                        color: #666;
+                        line-height: .2rem;
+                    }
+                    .product-price {
+                        strong {
+                            color: #f00;
+                        }
+                        del {
+                            color: #666;
+                        }
+                    }
+                    .product-num {
+                        display: flex;
+                        justify-content: space-between;
+                        color: #000;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+//订单区域样式
+#order {
+    position: fixed;
+    left: 0;
+    bottom: .45rem;
+    display: flex;
+    justify-content: space-between;
+    padding:.05rem .05rem .05rem .2rem;
+    border-top: .01rem solid #ccc;
+    width: 100%;
+    height: .5rem;
+    .order-total {
+        line-height: .4rem;
+        font-weight: 700;
+        color: #f00;
+    }
+}

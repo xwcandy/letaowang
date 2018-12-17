@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘网搜索页-self</title>
+    <!-- 1、css在head中引入
+    2、js在body结束标签上面引入
+    3、先引入第三方包（方便我们自己使用和覆盖）
+    4、再引入自己的包
+    5、如果有依赖关系，先引入被依赖的包，再引入不被依赖的包 -->
+
+    <!-- 引入MUI的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 引入字体图标文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入主页的less文件 -->
+    <link rel="stylesheet/less" href="less/search.less">
+    <!-- 引入less编译器 -->
+    <script src='lib/less/less.js'></script>
+    <!-- 屏幕适配js文件 -->
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript: history.back();" class='fa fa-arrow-left icon-back'></a>
+        <h4>搜索中心</h4>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 搜索表单 -->
+        <div class="search-form">
+            <form action="#">
+                <input type="search" class='input-search' placeholder='请输入你要搜索的商品'>
+                <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+            </form>
+        </div>
+        <!-- 搜索历史 -->
+        <div class="search-history">
+            <!-- 使用卡片布局 -->
+            <div class="mui-card">
+                <!--放置标题-->
+                <div class="mui-card-header">
+                    <span class=title>搜索历史</span>
+                    <a href="#" class='fa fa-trash btn-clear'>清空记录</a>
+                </div>
+                <!--内容区-->
+                <div class="mui-card-content">
+                    <ul class="mui-table-view historyData">
+                        <li class="mui-table-view-cell">Item 1
+                            <span class="mui-badge fa fa-close historyDel"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <span class="fa fa-home"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li class='active'>
+                <a href="category.html">
+                    <span class="fa fa-bars"></span>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <span class="fa fa-shopping-cart"></span>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <span class="fa fa-user"></span>
+                    <p>个人中心</p>
+                </a>
+            </li>
+        </ul>
+
+    </footer>
+
+
+    <!-- 准备历史记录的模版 -->
+    <script id='historyTpl' type='text/html'>
+        <!-- 判断数组长度 小于0说明还没有记录 -->
+        {{if data.length > 0 }}
+            {{each data value index}}
+            <li class="mui-table-view-cell">{{value}}
+                <span class="mui-badge fa fa-close historyDel" data-index='{{index}}'></span>
+            </li>
+            {{/each}}
+        {{else}}
+            <li class="mui-table-view-cell">暂时还没有搜索记录！</li>
+        {{/if}}
+    </script>
+
+
+    <!-- 引入zepto -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入MUI的js文件 -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入模版引擎 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+
+    <!-- 引入首页index.js -->
+    <script src="js/search.js"></script>
+</body>
+
+</html>

@@ -59,8 +59,7 @@ body {
   left: 0;
 }
 #header a.icon-search,
-#header a.icon-home,
-#header a.icon-refresh {
+#header a.icon-home {
   right: 0;
 }
 #footer {
@@ -133,10 +132,6 @@ body {
 .product-list ul li a .title {
   height: .48rem;
   overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 .product-list ul li a .title,
 .product-list ul li a .price {
@@ -148,4 +143,7 @@ body {
 }
 .product-list ul li a button {
   margin-bottom: .1rem;
+}
+#main ul li:last-child .btn-exit {
+  width: 100%;
 }

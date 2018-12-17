@@ -1,0 +1,49 @@
+// 引入公共样式
+@import 'base.less';
+
+//商品详情页 主体区域样式
+#main {
+    font-size: .14rem;
+    .productDetail {
+        ul {
+            // 尺码li
+            li:nth-child(3) {
+                line-height: .33rem;
+                .btn-size {
+                    margin-bottom: .05rem;
+                    &.active {
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//底部区域样式 覆盖base里面的
+#footer {
+    background-color: #ccc;
+    ul {
+        li {
+            flex: 1;
+            padding: .06rem;
+            button {
+                width: 100%;
+                
+            }
+        }
+        li:first-child {
+            width: .62rem;
+            flex: none;
+            a {
+                display: block;
+                padding: .06rem;
+                font-size: .2rem;
+                color: #333;
+            }
+            
+        }
+
+    }
+}

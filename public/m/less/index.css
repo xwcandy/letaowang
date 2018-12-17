@@ -23,6 +23,7 @@ body {
   background-color: #006699;
   height: .45rem;
   width: 100vw;
+  padding: 0 .45rem;
   display: flex;
   text-align: center;
   line-height: .45rem;
@@ -33,17 +34,31 @@ body {
   flex: 1;
   line-height: .45rem;
   height: .45rem;
-  margin: 0 .45rem 0 .45rem;
   font-weight: 400;
+  margin: 0;
+}
+#header form {
+  flex: 1;
+}
+#header form .search {
+  font-size: .14rem;
+  text-align-last: left;
+  color: #ccc;
+  background-color: #fff;
 }
 #header a {
   position: absolute;
-  right: 0;
   top: 0;
   width: .45rem;
   height: .45rem;
   line-height: .45rem;
   color: #fff;
+}
+#header a:first-of-type {
+  left: 0;
+}
+#header a:last-of-type {
+  right: 0;
 }
 #footer {
   position: fixed;
@@ -59,6 +74,13 @@ body {
 }
 #footer ul li {
   width: 25%;
+  padding: .02rem;
+}
+#footer ul li.active a {
+  color: orange;
+}
+#footer ul li.active a p {
+  color: orange;
 }
 #footer ul li a {
   display: block;
@@ -146,7 +168,6 @@ body {
 #man .content ul li {
   width: 50%;
   margin-bottom: .1rem;
-  box-shadow: 0 0 2px #ccc;
   background-color: #fff;
 }
 #sport .content ul li a,
@@ -154,6 +175,7 @@ body {
 #man .content ul li a {
   display: block;
   text-align: center;
+  box-shadow: 0 0 2px #ccc;
 }
 #sport .content ul li a img,
 #woman .content ul li a img,

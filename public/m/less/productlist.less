@@ -1,0 +1,33 @@
+@import 'base.less';
+
+// 商品列表主体样式
+#main {
+    background-color: #fff;
+    //商品列表区域
+    .productList {
+        //头部 标题
+        .head {
+            margin-bottom: .1rem;
+            ul {
+                display: flex;
+                background-color: #eee;
+                li {
+                    flex: 1;
+                    a {
+                        display: block;
+                        line-height: .3rem;
+                        text-align: center;
+                        font-size: .14rem;
+                        color: #666;
+                    }
+                    &.active {
+                        a {
+                            color: #f00;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
